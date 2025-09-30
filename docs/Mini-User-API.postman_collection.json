@@ -1,0 +1,155 @@
+{
+  "info": {
+    "name": "Mini User API - Prueba Técnica",
+    "description": "Colección de Postman para la Mini API de Gestión de Usuarios",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/health",
+          "host": ["{{base_url}}"],
+          "path": ["api", "health"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Información General",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/",
+          "host": ["{{base_url}}"],
+          "path": [""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear Usuario",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Juan Pérez\",\n  \"email\": \"juan.perez@email.com\",\n  \"age\": 28,\n  \"phone\": \"+1234567890\",\n  \"address\": \"Calle Principal 123, Ciudad\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener Todos los Usuarios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users?page=1&limit=10",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users"],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar Usuarios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users/search?search=juan",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "search"],
+          "query": [
+            {
+              "key": "search",
+              "value": "juan"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener Usuario por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users/1",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar Usuario",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Juan Carlos Pérez\",\n  \"age\": 29\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/1",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar Usuario",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users/1",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "1"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}
