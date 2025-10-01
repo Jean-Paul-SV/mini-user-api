@@ -1,10 +1,8 @@
 # Docker Compose para Mini API de Gestión de Usuarios
 # Prueba Técnica - Desarrollador Jr. Backend
 #
-# @author Paul K
+# @author Jean Paul Serrato Violeth
 # @version 1.0.0
-
-version: '3.8'
 
 services:
   # Base de datos PostgreSQL

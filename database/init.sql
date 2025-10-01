@@ -44,9 +44,9 @@ CREATE TRIGGER update_users_updated_at
     FOR EACH ROW
     EXECUTE FUNCTION update_updated_at_column();
 
--- Insertar datos de ejemplo (opcional)
+-- Insertar datos de ejemplo
 INSERT INTO users (name, email, age, phone, address) VALUES
-('Juan Pérez', 'juan.perez@email.com', 28, '+1234567890', 'Calle Principal 123, Ciudad'),
+('Juan Pérez', 'juan.2024perez@email.com', 28, '+1234567890', 'Calle Principal 123, Ciudad'),
 ('María García', 'maria.garcia@email.com', 32, '+0987654321', 'Avenida Central 456, Ciudad'),
 ('Carlos López', 'carlos.lopez@email.com', 25, '+1122334455', 'Plaza Mayor 789, Ciudad'),
 ('Ana Martínez', 'ana.martinez@email.com', 30, '+5566778899', 'Calle Secundaria 321, Ciudad'),

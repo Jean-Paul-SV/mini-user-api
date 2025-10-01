@@ -53,7 +53,7 @@ app.get('/', (req, res) => {
     res.json({
         message: 'Bienvenido a la Mini API de Gestión de Usuarios',
         version: '1.0.0',
-        author: 'Paul K',
+        author: 'Jean Paul Serrato Violeth',
         endpoints: {
             users: '/api/users',
             health: '/api/health'
@@ -74,7 +74,7 @@ app.get('/api/health', (req, res) => {
 app.use('/api/users', userRoutes);
 
 // Middleware para rutas no encontradas
-app.use('*', (req, res) => {
+app.use((req, res) => {
     res.status(404).json({
         error: 'Endpoint no encontrado',
         message: `La ruta ${req.originalUrl} no existe`,

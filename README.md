@@ -62,16 +62,17 @@ mini-user-api/
 
 2. **Ejecutar con Docker Compose**
    ```bash
-   docker-compose up -d
+   docker compose up -d --build
    ```
 
 3. **Verificar que los servicios estén funcionando**
    ```bash
-   docker-compose ps
+   docker compose ps
    ```
 
 4. **Acceder a la aplicación**
    - API: http://localhost:3000
+   - Documentación simple: http://localhost:3000/api
    - Adminer (DB Admin): http://localhost:8080
 
 ### Opción 2: Instalación Local
@@ -113,6 +114,7 @@ mini-user-api/
 |--------|----------|-------------|
 | GET | `/` | Información general de la API |
 | GET | `/api/health` | Health check |
+| GET | `/api` | Listado simple de rutas y métodos |
 | POST | `/api/users` | Crear usuario |
 | GET | `/api/users` | Listar usuarios (con paginación) |
 | GET | `/api/users/search` | Buscar usuarios |
